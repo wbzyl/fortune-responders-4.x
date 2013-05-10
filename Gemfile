@@ -47,10 +47,8 @@ gem "puma"
 gem "simple_form"
 gem "less-rails"
 
-group :assets do
-  gem "therubyracer"
-  gem "twitter-bootstrap-rails"
-end
+gem "therubyracer"
+gem "twitter-bootstrap-rails"
 
 group :development, :test do
   gem "rspec-rails"
