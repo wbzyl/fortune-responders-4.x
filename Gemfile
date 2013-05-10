@@ -46,6 +46,7 @@ end
 gem "puma"
 gem "simple_form"
 gem "less-rails"
+
 group :assets do
   gem "therubyracer"
   gem "twitter-bootstrap-rails"
@@ -60,3 +61,6 @@ end
 group :test do
   gem "capybara"
 end
+
+gem 'responders', git: 'git://github.com/plataformatec/responders.git'
+gem 'will_paginate', git: 'git://github.com/mislav/will_paginate.git'
