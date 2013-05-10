@@ -11,3 +11,5 @@
  *= require_self
  *= require bootstrap_and_overrides
  */
+
+footer { margin-top: 2em; }
