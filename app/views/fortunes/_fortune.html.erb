@@ -1,0 +1,14 @@
+<tr>
+  <td class='span1'><%= link_to fortune.id, fortune_path(fortune) %></td>
+  <td class='span6'><%= fortune.quotation %></td>
+  <td class='span3'><%= fortune.source %></td>
+  <td class='span2'>
+    <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                edit_fortune_path(fortune), :class => 'btn btn-mini' %>
+    <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                fortune_path(fortune),
+                :method => :delete,
+                :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                :class => 'btn btn-mini btn-danger' %>
+  </td>
+</tr>
