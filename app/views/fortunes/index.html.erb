@@ -15,6 +15,11 @@
   <%= will_paginate @fortunes, :container => false %>
 </div>
 
+<%= form_tag fortunes_path, method: :get, id: "fortunes_search", class: "form-inline" do %>
+  <%= text_field_tag :query, params[:query], class: "span4" %>
+  <%= submit_tag "Search", name: nil, class: "btn" %>
+<% end %>
+
 <table class="table table-striped">
   <thead>
     <tr>
