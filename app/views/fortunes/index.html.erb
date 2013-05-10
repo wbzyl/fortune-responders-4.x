@@ -8,6 +8,13 @@
             :class => 'btn btn-primary' %>
 </p>
 
+<div class="digg_pagination">
+  <div class="page_info">
+    <%= page_entries_info @fortunes %>
+  </div>
+  <%= will_paginate @fortunes, :container => false %>
+</div>
+
 <table class="table table-striped">
   <thead>
     <tr>

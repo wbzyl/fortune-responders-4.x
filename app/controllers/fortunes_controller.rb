@@ -2,7 +2,8 @@ class FortunesController < ApplicationController
   before_action :set_fortune, only: [:show, :edit, :update, :destroy]
 
   def index
-    @fortunes = Fortune.all
+    # @fortunes = Fortune.all
+    @fortunes = Fortune.order('created_at DESC').page(params[:page]).per_page(4)
     respond_with(@fortunes)
   end
 
