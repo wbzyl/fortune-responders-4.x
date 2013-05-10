@@ -4,7 +4,7 @@
 # $ locate platitudes.u8
 #   /usr/share/games/fortune/platitudes.u8
 
-platitudes = File.readlines('platitudes.u8', "\n%\n")
+platitudes = File.readlines('db/platitudes.u8', "\n%\n")
 platitudes.map do |p|
   reg = /\t?(.+)\n\t\t--\s*(.*)\n%\n/m
   m = p.match(reg)
