@@ -1,0 +1,14 @@
+<%- model_class = Comment -%>
+
+<dl class="dl-horizontal">
+  <dt><%= model_class.human_attribute_name(:body) %>:</strong></dt>
+  <dd><%= comment.body %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:author) %>:</strong></dt>
+  <dd><%= comment.author %></dd>
+</dl>
+<div class="form-actions">
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+     edit_fortune_comment_path(@fortune, comment), class: 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+    [@fortune, comment], method: :delete, class: 'btn btn-danger'%>
+</div>

@@ -10,6 +10,7 @@ class FortunesController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
     respond_with(@fortune)
   end
 
