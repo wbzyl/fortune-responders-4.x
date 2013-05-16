@@ -2,6 +2,8 @@
 
 class Fortune < ActiveRecord::Base
 
+  has_many :comments, dependent: :destroy
+
   validates :quotation, presence: true
   validates :quotation, length: { maximum: 256 }
   validates :quotation, uniqueness: { case_sensitive: false }
