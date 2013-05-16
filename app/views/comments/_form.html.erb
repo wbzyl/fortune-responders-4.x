@@ -1,0 +1,18 @@
+<%= simple_form_for [@fortune, @comment], :html => { :class => 'form-horizontal' } do |f| %>
+
+<% if f.error_notification %>
+<div class="alert alert-error fade in">
+  <a class="close" data-dismiss="alert" href="#">&times;</a>
+  <%= f.error_notification %>
+</div>
+<% end %>
+
+<%= f.input :body, :input_html => { :class => "span6" } %>
+<%= f.input :author, :input_html => { :class => "span6" } %>
+
+<div class="form-actions">
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+          fortunes_path, :class => 'btn' %>
+  <%= f.button :submit, :class => 'btn btn-primary' %>
+</div>
+<% end %>
