@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130516110147) do
+ActiveRecord::Schema.define(version: 20130518170649) do
 
   create_table "comments", force: true do |t|
     t.integer  "fortune_id"
@@ -26,6 +26,13 @@ ActiveRecord::Schema.define(version: 20130516110147) do
   create_table "fortunes", force: true do |t|
     t.text     "quotation"
     t.string   "source"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "password_digest"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
