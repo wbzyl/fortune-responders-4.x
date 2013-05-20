@@ -1,15 +1,16 @@
 FortuneResponders4X::Application.routes.draw do
-  resources :users
-
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
+  get "sessions/new"
   root 'fortunes#index'
 
   resources :fortunes do
     resources :comments
   end
+
+  get "register" => "users#new",    :as => "register"
+  get "login"    => "sessions#new", :as => "login"
+
+  resources :users
+  resources :sessions
 
   # Example resource route with options:
   #   resources :products do

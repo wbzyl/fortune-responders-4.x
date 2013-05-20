@@ -3,8 +3,13 @@
     <div class="container">
       <%= link_to icon("quote-left", "Fortunes"), root_path, class: "brand" %>
       <ul class="nav pull-right">
-        <li><%= link_to icon("home", "Tao"), "http://tao.inf.ug.edu.pl/" %></li>
-        <li><%= link_to icon("ambulance", "ASI"), "http://wbzyl.inf.ug.edu.pl/rails4/" %></li>
+        <% if current_user %>
+          <li><div class="logged-in">Logged in as <%= current_user.email %></div></li>
+          <li><%= link_to "Log Out", session_path("current"), method: "delete" %></li>
+        <% else %>
+          <li><%= link_to "Register", new_user_path %></li>
+          <li><%= link_to "Log In", new_session_path %></li>
+        <% end %>
       </ul>
     </div>
   </div>
