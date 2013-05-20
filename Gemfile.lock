@@ -40,6 +40,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.9)
+    bcrypt-ruby (3.0.1)
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -55,6 +56,11 @@ GEM
       execjs
     coffee-script-source (1.6.2)
     commonjs (0.2.6)
+    devise (3.0.0.rc)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      warden (~> 1.2.1)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -82,6 +88,7 @@ GEM
     minitest (4.7.4)
     multi_json (1.7.3)
     nokogiri (1.5.9)
+    orm_adapter (0.4.0)
     polyglot (0.3.3)
     puma (2.0.1)
       rack (>= 1.1, < 2.0)
@@ -111,7 +118,7 @@ GEM
     rspec-expectations (2.13.0)
       diff-lcs (>= 1.1.3, < 2.0)
     rspec-mocks (2.13.1)
-    rspec-rails (2.13.1)
+    rspec-rails (2.13.2)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
@@ -154,6 +161,8 @@ GEM
     uglifier (2.1.1)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    warden (1.2.1)
+      rack (>= 1.0)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -163,6 +172,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   coffee-rails (~> 4.0.0)
+  devise (= 3.0.0.rc)
   faker
   jbuilder (~> 1.0.1)
   jquery-rails
